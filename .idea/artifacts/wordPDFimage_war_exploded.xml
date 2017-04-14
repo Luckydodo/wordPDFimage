@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="wordPDFimage:war exploded">
+    <output-path>$PROJECT_DIR$/target/wordPDFimage</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="wordPDFimage" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.apache.pdfbox:pdfbox:1.8.2" />
+          <element id="library" level="project" name="Maven: org.apache.pdfbox:fontbox:1.8.2" />
+          <element id="library" level="project" name="Maven: org.apache.pdfbox:jempbox:1.8.2" />
+          <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.1.1" />
+          <element id="library" level="project" name="Maven: com.google.zxing:core:3.2.1" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/wordPDFimage/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="wordPDFimage/web/Web" />
+    </root>
+  </artifact>
+</component>

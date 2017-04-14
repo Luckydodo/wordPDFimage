@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.3hheb</groupId>
+  <artifactId>wordPDFimage</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>wordPDFimage Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.8.1</version>
+      <scope>test</scope>
+    </dependency>
+
+      <!-- https://mvnrepository.com/artifact/com.jacob/jacob -->
+      <dependency>
+          <groupId>com.jacob</groupId>
+          <artifactId>jacob</artifactId>
+          <version>1.0</version> <!--自定义-->
+          <scope>system</scope> <!--system，类似provided，需要显式提供依赖的jar以后，Maven就不会在Repository中查找它-->
+          <systemPath>${basedir}/lib/jacob.jar</systemPath> <!--项目根目录下的lib文件夹下-->
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
+      <dependency>
+          <groupId>org.apache.pdfbox</groupId>
+          <artifactId>pdfbox</artifactId>
+          <version>1.8.2</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/com.google.zxing/core -->
+      <dependency>
+          <groupId>com.google.zxing</groupId>
+          <artifactId>core</artifactId>
+          <version>3.2.1</version>
+      </dependency>
+
+  </dependencies>
+
+
+  <build>
+    <finalName>wordPDFimage</finalName>
+
+      <plugins>
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-compiler-plugin</artifactId>
+              <configuration>
+                  <source>1.6</source>
+                  <target>1.6</target>
+                  <encoding>utf-8</encoding>
+
+                  <compilerArguments>
+                      <extdirs>lib</extdirs><!--指定外部lib-->
+                  </compilerArguments>
+              </configuration>
+          </plugin>
+      </plugins>
+  </build>
+</project>
